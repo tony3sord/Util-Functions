@@ -1,4 +1,5 @@
-function userDeviceInfo() {
+export default function userDeviceInfo(div) {
+    const $div=d.getElementById(div)
     const isMobile={
         android:()=>ua.match(/android/i),
         ios:()=>ua.match(/iphone|ipad|ipod/i),
@@ -27,4 +28,9 @@ function userDeviceInfo() {
             this.opera() || this.ie() || this.edge);
         }
     };
+    $div.innerHTML=`<ul>
+    <li>User Agent:<b>${ua}</b></li>
+    <li>Plataforma:<b>${isMobile.any()?isMobile.any():isDesktop.any()}</b></li>
+    <li>Navegador:<b>${isBrowser.any()}</b></li>
+    </ul>`
 }
