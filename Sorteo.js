@@ -11,7 +11,6 @@ export function sortear(selector,btn) {
         if(e.target.matches(btn)){
             let g=random(selector);
             alert(g);
-            console.log(g);
         }
     })
 }
