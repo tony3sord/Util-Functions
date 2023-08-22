@@ -17,7 +17,7 @@ export function localizar(div) {
         <li>Longitud: <b>${coords.longitude}</b></li>
         <li>Precisión: <b>${coords.acurracy}</b></li>
         </ul>
-        <a href="https://www.google.com/maps/@${coords.lalitude},${coords.longitude},12z">Ver en GoogleMaps</a>
+        <a href="https://www.google.com/maps/@${coords.lalitude},${coords.longitude},12z" target="_blank" rel="noopener">Ver en GoogleMaps</a>
         `
     }
     const err= (err) => {
